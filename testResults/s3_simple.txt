@@ -1,0 +1,7 @@
+Program[
+  Ass[$count=Num[5]],
+  While[Gt[Var[$count],Num[0]],[
+    Move,
+    Ass[$count=Sub[Var[$count],Num[1]]]]
+    ],
+  TurnL]

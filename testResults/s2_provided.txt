@@ -1,0 +1,14 @@
+Program[ 
+  Move[Num[8]], 
+  TurnL, 
+  Loop[While[Or[Eq[NumBarrels, Num[0]], Lt[Add[OppFB, OppLR], Add[BarrelFB, BarrelLR]]], [ 
+    If[Lt[OppFB, Num[0]], [TurnAround], [ 
+      If[Gt[OppFB, Num[0]], [Move[Add[Num[1], Div[OppFB, Num[2]]]]], [ 
+        If[Lt[OppLR, Num[0]], [TurnL], [ 
+          If[Gt[OppLR, Num[0]], [TurnR], [ 
+            If[Eq[OppLR, Num[0]], [TakeFuel]]]]]]]]]]]],
+    If[And[Eq[BarrelFB, Num[0]], Eq[BarrelLR, Num[0]]], [TakeFuel], [ 
+      If[Lt[BarrelFB, Num[0]], [TurnAround], [ 
+        If[Gt[BarrelFB, Num[0]], [Move[BarrelFB]], [ 
+          If[Lt[BarrelLR, Num[0]], [TurnL], [ 
+            If[Gt[BarrelLR, Num[0]], [TurnR]]]]]]]]]]]]

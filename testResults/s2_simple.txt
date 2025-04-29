@@ -1,0 +1,9 @@
+Program[
+  While[Gt[FuelLeft,Sub[Num[5],Num[5]]],[
+    If[Eq[NumBarrels,Num[0]],[Wait],[
+      If[And[Eq[BarrelFB,Num[0]],Eq[BarrelLR,Num[0]]],[TakeFuel],[
+        If[Eq[Num[0],BarrelFB],[
+          If[Lt[BarrelLR,Num[0]],[TurnL],[TurnR]]
+        ],[
+          If[Gt[BarrelFB,Num[0]],[Move],[TurnAround]]
+]]]]]]]]]

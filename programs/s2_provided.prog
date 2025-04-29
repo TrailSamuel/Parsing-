@@ -1,0 +1,17 @@
+move(8);
+turnL; 
+loop {
+   while ( or(eq(numBarrels, 0), lt(add(oppFB, oppLR), add(barrelFB,barrelLR))) ) {
+      if (lt(oppFB,0)) { turnAround; }
+      else {if (gt(oppFB,0)) { move(add(1, div(oppFB, 2))); } 
+            else {if (lt(oppLR,0)) { turnL;}
+                  else {if (gt(oppLR,0)) { turnR;}
+                        else {if (eq(oppLR,0)) { takeFuel; }}}}
+   }
+}
+if ( and(eq(barrelFB, 0),eq(barrelLR, 0))) { takeFuel; }
+else {if ( lt(barrelFB, 0) ){ turnAround; }
+      else {if ( gt(barrelFB, 0) ) { move(barrelFB); }
+            else {if ( lt(barrelLR, 0) ) { turnL; }
+                  else { if ( gt(barrelLR, 0) ) { turnR; }}}}}
+}

@@ -1,0 +1,8 @@
+Program[
+  Move,
+  TurnL,
+  Move,
+  Move,
+  TakeFuel,
+  Loop[Move, TurnR, Wait]
+]

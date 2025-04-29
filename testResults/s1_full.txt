@@ -1,0 +1,17 @@
+Program[ 
+  While[Gt[FuelLeft, Num[0]], [ 
+    If[Gt[FuelLeft, Num[95]], [ShieldOn]], 
+    If[Lt[FuelLeft, Num[85]], [ShieldOff]], 
+    If[Gt[NumBarrels, Num[0]], [ 
+      If[Eq[BarrelFB, Num[0]], [ 
+        If[Eq[BarrelLR, Num[0]], [TakeFuel]]]], 
+      If[Gt[BarrelFB, Num[0]], [Move]], 
+      If[Lt[BarrelFB, Num[0]], [TurnAround]], 
+      If[Lt[BarrelLR, Num[0]], [TurnL]], 
+      If[Gt[BarrelLR, Num[0]], [TurnR]]]], 
+    If[Eq[NumBarrels, Num[0]], [ 
+      If[Lt[OppLR, Num[0]], [TurnR]], 
+      If[Gt[OppLR, Num[0]], [TurnL]], 
+      If[Gt[OppFB, Num[0]], [TurnAround]], 
+      If[Lt[OppFB, Num[0]], [ 
+        If[Gt[WallDist, Num[1]], [Move]]]]]]]]]

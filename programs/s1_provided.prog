@@ -1,0 +1,23 @@
+while ( gt(barrelFB, 0) ) {
+    move;
+}
+if (eq(barrelLR, 0)) {
+    takeFuel;
+}
+if (lt(barrelLR, 0)) {
+    turnL;
+    while ( gt(barrelFB,0) ){ move;} 
+    takeFuel;
+}
+if (gt(barrelLR, 0)) {
+    turnR;
+    while ( gt(barrelFB,0) ){ move;} 
+    takeFuel;
+}
+wait;
+loop {
+    if ( gt(fuelLeft, 0) ) {
+        move;
+        turnL;
+    }
+}

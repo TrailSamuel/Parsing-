@@ -1,0 +1,20 @@
+Program[
+  While[Gt[BarrelFB,Num[0]],[Move]],
+  If[Eq[BarrelLR,Num[0]],[TakeFuel]],
+  If[Lt[BarrelLR,Num[0]],[
+    TurnL,
+    While[Gt[BarrelFB,Num[0]],[Move]],
+    TakeFuel
+  ]],
+  If[Gt[BarrelLR,Num[0]],[
+    TurnR,
+    While[Gt[BarrelFB,Num[0]],[Move]],
+    TakeFuel
+  ]],
+  Wait,
+  Loop[
+    If[Gt[FuelLeft,Num[0]],[
+      Move,
+      TurnL
+    ]]
+  ]]
