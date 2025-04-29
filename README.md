@@ -16,13 +16,13 @@ A Java-based robot game where two robots compete for fuel on a 12x12 grid. The p
 Robots are programmed with a simple language featuring:
 
 ### Actions
-- Movement commands (`move`, `turnL`, `turnR`, `turnAround`)
-- Fuel collection (`takeFuel`)
-- Shield control (`shieldOn`/`shieldOff`)
+- Movement commands (move, turnL, turnR, turnAround)
+- Fuel collection (takeFuel)
+- Shield control (shieldOn/shieldOff)
 
 ### Sensors
-- Position sensing (`oppLR`, `oppFB`, `barrelLR`, `barrelFB`, `wallDist`)
-- Resource detection (`fuelLeft`, `numBarrels`)
+- Position sensing (oppLR, oppFB, barrelLR, barrelFB, wallDist)
+- Resource detection (fuelLeft, numBarrels)
 
 ### Control Structures
 - Variables, conditionals, loops, and arithmetic operations
